@@ -67,3 +67,5 @@ Director: Michel Gondry
 > 0
 
 Volviendo al menú...
+
+## Diagrama inicial de clases:
