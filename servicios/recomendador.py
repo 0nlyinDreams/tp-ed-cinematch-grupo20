@@ -10,3 +10,4 @@ class Recomendador:
     def recomendador_por_universo(self, universo_favorito: str) -> list[Pelicula]:
         """Devuelve todas las películas que pertenecen a un universo específico"""
         return self._catalogo.filtrar_por_universo(universo_favorito)
+

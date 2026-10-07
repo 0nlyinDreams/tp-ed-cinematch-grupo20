@@ -76,3 +76,4 @@ class Terminal:
                 print(f"- {pelicula}")
         else:
                 print(f"No hay películas del universo '{universo}'.")
+
