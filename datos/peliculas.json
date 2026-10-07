@@ -1,0 +1,142 @@
+[
+  {
+    "titulo": "Spider-Man 2",
+    "director": "Sam Raimi",
+    "actores": ["Tobey Maguire", "Kirsten Dunst", "Alfred Molina"],
+    "genero": "Acción",
+    "universo": "Spider-Man"
+  },
+  {
+    "titulo": "Spider-Man: No Way Home",
+    "director": "Jon Watts",
+    "actores": ["Tom Holland", "Zendaya", "Tobey Maguire"],
+    "genero": "Acción",
+    "universo": "Marvel Cinematic Universe"
+  },
+  {
+    "titulo": "Avengers: Endgame",
+    "director": "Anthony Russo",
+    "actores": ["Robert Downey Jr.", "Chris Evans", "Tom Holland"],
+    "genero": "Acción",
+    "universo": "Marvel Cinematic Universe"
+  },
+  {
+    "titulo": "Iron Man",
+    "director": "Jon Favreau",
+    "actores": ["Robert Downey Jr.", "Gwyneth Paltrow", "Jeff Bridges"],
+    "genero": "Acción",
+    "universo": "Marvel Cinematic Universe"
+  },
+  {
+    "titulo": "Chef",
+    "director": "Jon Favreau",
+    "actores": ["Jon Favreau", "Robert Downey Jr.", "Scarlett Johansson"],
+    "genero": "Comedia",
+    "universo": "Independiente"
+  },
+  {
+    "titulo": "Marriage Story",
+    "director": "Noah Baumbach",
+    "actores": ["Adam Driver", "Scarlett Johansson", "Laura Dern"],
+    "genero": "Drama",
+    "universo": "Independiente"
+  },
+  {
+    "titulo": "Jurassic Park",
+    "director": "Steven Spielberg",
+    "actores": ["Sam Neill", "Laura Dern", "Jeff Goldblum"],
+    "genero": "Ciencia Ficción",
+    "universo": "Jurassic"
+  },
+  {
+    "titulo": "Thor: Ragnarok",
+    "director": "Taika Waititi",
+    "actores": ["Chris Hemsworth", "Tom Hiddleston", "Jeff Goldblum"],
+    "genero": "Acción",
+    "universo": "Marvel Cinematic Universe"
+  },
+  {
+    "titulo": "Kong: Skull Island",
+    "director": "Jordan Vogt-Roberts",
+    "actores": ["Tom Hiddleston", "Samuel L. Jackson", "Brie Larson"],
+    "genero": "Aventura",
+    "universo": "MonsterVerse"
+  },
+  {
+    "titulo": "Pulp Fiction",
+    "director": "Quentin Tarantino",
+    "actores": ["John Travolta", "Uma Thurman", "Samuel L. Jackson"],
+    "genero": "Crimen",
+    "universo": "Tarantino"
+  },
+  {
+    "titulo": "Kill Bill: Vol. 1",
+    "director": "Quentin Tarantino",
+    "actores": ["Uma Thurman", "Lucy Liu", "David Carradine"],
+    "genero": "Acción",
+    "universo": "Tarantino"
+  },
+  {
+    "titulo": "Charlie's Angels",
+    "director": "McG",
+    "actores": ["Cameron Diaz", "Drew Barrymore", "Lucy Liu"],
+    "genero": "Acción",
+    "universo": "Angels"
+  },
+  {
+    "titulo": "Shrek",
+    "director": "Andrew Adamson",
+    "actores": ["Mike Myers", "Eddie Murphy", "Cameron Diaz"],
+    "genero": "Animación",
+    "universo": "Shrek"
+  },
+  {
+    "titulo": "Mulan",
+    "director": "Tony Bancroft",
+    "actores": ["Ming-Na Wen", "Eddie Murphy", "BD Wong"],
+    "genero": "Animación",
+    "universo": "Disney"
+  },
+  {
+    "titulo": "Jurassic World",
+    "director": "Colin Trevorrow",
+    "actores": ["Chris Pratt", "Bryce Dallas Howard", "BD Wong"],
+    "genero": "Ciencia Ficción",
+    "universo": "Jurassic"
+  },
+  {
+    "titulo": "Guardians of the Galaxy",
+    "director": "James Gunn",
+    "actores": ["Chris Pratt", "Zoe Saldana", "Dave Bautista"],
+    "genero": "Ciencia Ficción",
+    "universo": "Marvel Cinematic Universe"
+  },
+  {
+    "titulo": "Avatar",
+    "director": "James Cameron",
+    "actores": ["Sam Worthington", "Zoe Saldana", "Sigourney Weaver"],
+    "genero": "Ciencia Ficción",
+    "universo": "Avatar"
+  },
+  {
+    "titulo": "Alien",
+    "director": "Ridley Scott",
+    "actores": ["Sigourney Weaver", "Tom Skerritt", "John Hurt"],
+    "genero": "Terror",
+    "universo": "Alien"
+  },
+  {
+    "titulo": "Prometheus",
+    "director": "Ridley Scott",
+    "actores": ["Noomi Rapace", "Michael Fassbender", "Charlize Theron"],
+    "genero": "Ciencia Ficción",
+    "universo": "Alien"
+  },
+  {
+    "titulo": "X-Men: First Class",
+    "director": "Matthew Vaughn",
+    "actores": ["James McAvoy", "Michael Fassbender", "Jennifer Lawrence"],
+    "genero": "Acción",
+    "universo": "X-Men"
+  }
+]
