@@ -50,7 +50,8 @@
     "director": "Steven Spielberg",
     "actores": ["Sam Neill", "Laura Dern", "Jeff Goldblum"],
     "genero": "Ciencia Ficción",
-    "universo": "Jurassic"
+    "universo": "Jurassic",
+    "subcategoria": "Dinosaurios y Mounstros"
   },
   {
     "titulo": "Thor: Ragnarok",
@@ -65,7 +66,8 @@
     "director": "Jordan Vogt-Roberts",
     "actores": ["Tom Hiddleston", "Samuel L. Jackson", "Brie Larson"],
     "genero": "Aventura",
-    "universo": "MonsterVerse"
+    "universo": "MonsterVerse",
+    "subcategoria": "Dinosaurios y Mounstros"
   },
   {
     "titulo": "Pulp Fiction",
@@ -95,21 +97,24 @@
     "director": "Andrew Adamson",
     "actores": ["Mike Myers", "Eddie Murphy", "Cameron Diaz"],
     "genero": "Animación",
-    "universo": "Shrek"
+    "universo": "Shrek",
+    "subcategoria": "Comedia animada"
   },
   {
     "titulo": "Mulan",
     "director": "Tony Bancroft",
     "actores": ["Ming-Na Wen", "Eddie Murphy", "BD Wong"],
     "genero": "Animación",
-    "universo": "Disney"
+    "universo": "Disney",
+    "subcategoria": "Princesas"
   },
   {
     "titulo": "Jurassic World",
     "director": "Colin Trevorrow",
     "actores": ["Chris Pratt", "Bryce Dallas Howard", "BD Wong"],
     "genero": "Ciencia Ficción",
-    "universo": "Jurassic"
+    "universo": "Jurassic",
+    "subcategoria": "Dinosaurios y Mounstros"
   },
   {
     "titulo": "Guardians of the Galaxy",
@@ -148,6 +153,94 @@
     "actores": ["James McAvoy", "Michael Fassbender", "Jennifer Lawrence"],
     "genero": "Acción",
     "universo": "X-Men"
+  },
+  {
+    "titulo": "Harry Potter y la Piedra Filosofal",
+    "director": "Chris Columbus",
+    "actores": ["Daniel Radcliffe", "Emma Watson", "Rupert Grint"],
+    "genero": "Fantasia",
+    "universo": "Wizarding World",
+    "subcategoria": "Magia y Hechiceria"
+  },
+  {
+    "titulo": "Las Crónicas de Narnia: El León, la Bruja y el Ropero",
+    "director": "Andrew Adamson",
+    "actores": ["Georgie Henley", "Skandar Keynes", "William Moseley"],
+    "genero": "Fantasia",
+    "universo": "Narnia",
+    "subcategoria": "Mundos Magicos"
+  },
+  {
+    "titulo": "Miss Peregrine y los Niños Peculiares",
+    "director": "Tim Burton",
+    "actores": ["Eva Green", "Asa Butterfield", "Samuel L. Jackson"],
+    "genero": "Fantasia",
+    "universo": "Miss Peregrine",
+    "subcategoria": "Fantasia Oscura"
+  },
+  {
+    "titulo": "El Conjuro",
+    "director": "James Wan",
+    "actores": ["Vera Farmiga", "Patrick Wilson", "Lili Taylor"],
+    "genero": "Terror",
+    "universo": "Warren",
+    "subcategoria": "Sobrenatural"
+  },
+  {
+    "titulo": "El Viaje de Chihiro",
+    "director": "Hayao Miyazaki",
+    "actores": ["Rumi Hiiragi", "Miyu Irino", "Mari Natsuki"],
+    "genero": "Animación",
+    "universo": "Studio Ghibli",
+    "subcategoria": "Anime"
+  },
+  {
+    "titulo": "El Laberinto del Fauno",
+    "director": "Guillermo del Toro",
+    "actores": ["Ivana Baquero", "Sergi López", "Maribel Verdú"],
+    "genero": "Fantasia",
+    "universo": "Independiente",
+    "subcategoria": "Fantasia Oscura"
+  },
+  {
+    "titulo": "Coraline y la Puerta Secreta",
+    "director": "Henry Selick",
+    "actores": ["Dakota Fanning", "Teri Hatcher", "John Hodgman"],
+    "genero": "Fantasia",
+    "universo": "Independiente",
+    "subcategoria": "Fantasia Oscura"
+  },
+  {
+    "titulo": "El Cadáver de la Novia",
+    "director": "Tim Burton",
+    "actores": ["Johnny Depp", "Helena Bonham Carter", "Emily Watson"],
+    "genero": "Fantasia",
+    "universo": "Tim Burton",
+    "subcategoria": "Fantasia Oscura"
+  },
+  {
+    "titulo": "Shingeki no Kyojin: The Final Chapters",
+    "director": "Yuichiro Hayashi",
+    "actores": ["Yuki Kaji", "Yui Ishikawa", "Marina Inoue"],
+    "genero": "Animación",
+    "universo": "Attack on Titan",
+    "subcategoria": "Anime"
+  },
+  {
+    "titulo": "Your Name",
+    "director": "Makoto Shinkai",
+    "actores": ["Ryunosuke Kamiki", "Mone Kamishiraishi", "Ryo Narita"],
+    "genero": "Animación",
+    "universo": "Makoto Shinkai",
+    "subcategoria": "Anime"
+  },
+  {
+    "titulo": "Animales Fantásticos y Dónde Encontrarlos",
+    "director": "David Yates",
+    "actores": ["Eddie Redmayne", "Katherine Waterston", "Dan Fogler"],
+    "genero": "Fantasía",
+    "universo": "Wizarding World",
+    "subcategoria": "Magia y Hechiceria"
   }
 ]
 

@@ -10,21 +10,35 @@ class Terminal:
 
     def _inicializar_arbol_categorias(self) -> None:
         raiz = self._arbol_categorias.insertar_raiz("Películas")
-        categorias = ["Acción", "Comedia", "Drama", "Aventura", "Ciencia Ficción", "Animación", "Crimen", "Terror"]
+        categorias = ["Acción", "Comedia", "Drama", "Aventura", "Ciencia Ficción", "Animación", "Crimen", "Terror", "Fantasia"]
+        #accion
         nodo_accion= self._arbol_categorias.agregar_hijo(raiz, "Acción")
         self._arbol_categorias.agregar_hijo(nodo_accion, "Superheroes")
         self._arbol_categorias.agregar_hijo(nodo_accion, "Artes Marciales")
         self._arbol_categorias.agregar_hijo(nodo_accion, "Espionaje y Agentes")
-
+        #ciencia ficcion
         nodo_cf = self._arbol_categorias.agregar_hijo(raiz, "Ciencia Ficción")
         self._arbol_categorias.agregar_hijo(nodo_cf, "Aventura Espacial")
         self._arbol_categorias.agregar_hijo(nodo_cf, "Dinosaurios y Mounstros")
-
+        #terror
+        nodo_terror = self._arbol_categorias.agregar_hijo(raiz, "Terror")
+        self._arbol_categorias.agregar_hijo(nodo_terror, "Sobrenatural")
+        self._arbol_categorias.agregar_hijo(nodo_terror, "Psicologico")
+        #fantasia
+        nodo_fantasia = self._arbol_categorias.agregar_hijo(raiz, "Fantasia")
+        self._arbol_categorias.agregar_hijo(nodo_fantasia, "Mundos Magicos")
+        self._arbol_categorias.agregar_hijo(nodo_fantasia, "Magia y Hechiceria")
+        self._arbol_categorias.agregar_hijo(nodo_fantasia, "Fantasia Oscura")
+        #animacion
+        nodo_animacion = self._arbol_categorias.agregar_hijo(raiz, "Animación")
+        self._arbol_categorias.agregar_hijo(nodo_animacion, "Anime")
+        self._arbol_categorias.agregar_hijo(nodo_animacion, "Princesas")
+        self._arbol_categorias.agregar_hijo(nodo_animacion, "Comedia animada")
         self._arbol_categorias.agregar_hijo(raiz, "Comedia")
         self._arbol_categorias.agregar_hijo(raiz, "Drama")
         self._arbol_categorias.agregar_hijo(raiz, "Aventura")
         self._arbol_categorias.agregar_hijo(raiz, "Crimen")
-        self._arbol_categorias.agregar_hijo(raiz, "Terror")
+        
         #for cat in categorias:
          #   self._arbol_categorias.agregar_hijo(raiz, cat)
 
@@ -92,9 +106,13 @@ class Terminal:
         nodo_raiz = self._arbol_categorias.raiz #buscar("Peliculas")
 
         for genero in nodo_raiz.hijos:
-            print(f"[{genero.dato}]")
+            lista_genero = self._catalogo.filtrar_por_genero(genero.dato)
+            cantidad_genero = len(lista_genero)
+            print(f"[{genero.dato}] ({cantidad_genero})")
             for sub in genero.hijos:
-                print(f"  └── {sub.dato}")
+                lista_sub = self._catalogo.filtrar_por_subcategoria(sub.dato)
+                cantidad_sub = len(lista_sub)
+                print(f"  └── {sub.dato} ({cantidad_sub})")
 
         eleccion = input("Ingrese la categoria o subcategoria que quiere ver: ").strip()
         resultados = self._catalogo.filtrar_por_subcategoria(eleccion)
