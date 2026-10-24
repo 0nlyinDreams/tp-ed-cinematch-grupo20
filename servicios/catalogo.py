@@ -69,7 +69,8 @@ class Catalogo:
                     item["director"],
                     item["actores"],
                     item["genero"],
-                    item["universo"]
+                    item["universo"],
+                    item.get("subcategoria", "General")
                 )
                 self._elementos.append(pelicula)
                 # Insertamos cada pelicula cargada en el arbol usando el titulo como clave
@@ -101,5 +102,14 @@ class Catalogo:
             if p.director.lower() == director.lower()
         ]   
 
+    def filtrar_por_subcategoria(self, subcategoria: str) -> list[Pelicula]:
+        #return [
+         #   p for p in self._elementos
+        #]
+        lista_filtrada = []
+        for p in self._elementos:
+            if p._subcategoria.strip().lower() == subcategoria.strip().lower():
+                lista_filtrada.append(p)
+        return lista_filtrada
     def __len__(self) -> int:
         return len(self._elementos)

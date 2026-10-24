@@ -4,28 +4,32 @@
     "director": "Sam Raimi",
     "actores": ["Tobey Maguire", "Kirsten Dunst", "Alfred Molina"],
     "genero": "Acción",
-    "universo": "Spider-Man"
+    "universo": "Spider-Man",
+    "subcategoria": "Superheroes"
   },
   {
     "titulo": "Spider-Man: No Way Home",
     "director": "Jon Watts",
     "actores": ["Tom Holland", "Zendaya", "Tobey Maguire"],
     "genero": "Acción",
-    "universo": "Marvel Cinematic Universe"
+    "universo": "Marvel",
+    "subcategoria": "Superheroes"
   },
   {
     "titulo": "Avengers: Endgame",
     "director": "Anthony Russo",
     "actores": ["Robert Downey Jr.", "Chris Evans", "Tom Holland"],
     "genero": "Acción",
-    "universo": "Marvel Cinematic Universe"
+    "universo": "Marvel",
+    "subcategoria": "Superheroes"
   },
   {
     "titulo": "Iron Man",
     "director": "Jon Favreau",
     "actores": ["Robert Downey Jr.", "Gwyneth Paltrow", "Jeff Bridges"],
     "genero": "Acción",
-    "universo": "Marvel Cinematic Universe"
+    "universo": "Marvel",
+    "subcategoria": "Superheroes"
   },
   {
     "titulo": "Chef",
@@ -53,7 +57,8 @@
     "director": "Taika Waititi",
     "actores": ["Chris Hemsworth", "Tom Hiddleston", "Jeff Goldblum"],
     "genero": "Acción",
-    "universo": "Marvel Cinematic Universe"
+    "universo": "Marvel",
+    "subcategoria": "Superheroes"
   },
   {
     "titulo": "Kong: Skull Island",
@@ -74,14 +79,16 @@
     "director": "Quentin Tarantino",
     "actores": ["Uma Thurman", "Lucy Liu", "David Carradine"],
     "genero": "Acción",
-    "universo": "Tarantino"
+    "universo": "Tarantino",
+    "subcategoria": "Artes Marciales"
   },
   {
     "titulo": "Charlie's Angels",
     "director": "McG",
     "actores": ["Cameron Diaz", "Drew Barrymore", "Lucy Liu"],
     "genero": "Acción",
-    "universo": "Angels"
+    "universo": "Angels",
+    "subcategoria": "Espionaje y Agentes"
   },
   {
     "titulo": "Shrek",
@@ -109,14 +116,16 @@
     "director": "James Gunn",
     "actores": ["Chris Pratt", "Zoe Saldana", "Dave Bautista"],
     "genero": "Ciencia Ficción",
-    "universo": "Marvel Cinematic Universe"
+    "universo": "Marvel",
+    "subcategoria": "Aventura Espacial"
   },
   {
     "titulo": "Avatar",
     "director": "James Cameron",
     "actores": ["Sam Worthington", "Zoe Saldana", "Sigourney Weaver"],
     "genero": "Ciencia Ficción",
-    "universo": "Avatar"
+    "universo": "Avatar",
+    "subcategoria": "Aventura Espacial"
   },
   {
     "titulo": "Alien",
@@ -130,7 +139,8 @@
     "director": "Ridley Scott",
     "actores": ["Noomi Rapace", "Michael Fassbender", "Charlize Theron"],
     "genero": "Ciencia Ficción",
-    "universo": "Alien"
+    "universo": "Alien",
+    "subcategoria": "Aventura Espacial"
   },
   {
     "titulo": "X-Men: First Class",

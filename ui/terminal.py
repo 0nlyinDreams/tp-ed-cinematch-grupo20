@@ -1,9 +1,32 @@
 from servicios.catalogo import Catalogo
+from estructura.arbol_general import ArbolGeneral
 
 class Terminal: 
-    """Interfaz de línea de comandos."""
     def __init__(self, catalogo: Catalogo) -> None:
         self._catalogo = catalogo
+        # Inicializamos el Árbol General para las categorías (Opción 2)
+        self._arbol_categorias = ArbolGeneral()
+        self._inicializar_arbol_categorias()
+
+    def _inicializar_arbol_categorias(self) -> None:
+        raiz = self._arbol_categorias.insertar_raiz("Películas")
+        categorias = ["Acción", "Comedia", "Drama", "Aventura", "Ciencia Ficción", "Animación", "Crimen", "Terror"]
+        nodo_accion= self._arbol_categorias.agregar_hijo(raiz, "Acción")
+        self._arbol_categorias.agregar_hijo(nodo_accion, "Superheroes")
+        self._arbol_categorias.agregar_hijo(nodo_accion, "Artes Marciales")
+        self._arbol_categorias.agregar_hijo(nodo_accion, "Espionaje y Agentes")
+
+        nodo_cf = self._arbol_categorias.agregar_hijo(raiz, "Ciencia Ficción")
+        self._arbol_categorias.agregar_hijo(nodo_cf, "Aventura Espacial")
+        self._arbol_categorias.agregar_hijo(nodo_cf, "Dinosaurios y Mounstros")
+
+        self._arbol_categorias.agregar_hijo(raiz, "Comedia")
+        self._arbol_categorias.agregar_hijo(raiz, "Drama")
+        self._arbol_categorias.agregar_hijo(raiz, "Aventura")
+        self._arbol_categorias.agregar_hijo(raiz, "Crimen")
+        self._arbol_categorias.agregar_hijo(raiz, "Terror")
+        #for cat in categorias:
+         #   self._arbol_categorias.agregar_hijo(raiz, cat)
 
     def iniciar(self) -> None:
         # Un bucle que no muere en la primera opción
@@ -14,28 +37,37 @@ class Terminal:
             if opcion == "1":
                 self._buscar_titulo()
             elif opcion == "2":
-                self._listar_todo()
+                self._explorar_categorias()
             elif opcion == "3":
                 self._filtrar_genero()
             elif opcion == "4":
                 self._filtrar_universo()
             elif opcion == "5":
-                self._recomendar
+                self._recomendar()
             elif opcion == "6":
-                self._ver_mas_tarde
+                self._ver_mas_tarde()
             elif opcion == "0":
                 print("¡Hasta la próxima!")
                 break
             else:
-                print ("Opción inválida.")
+                print("Opción inválida.")
             print()
 
+            if opcion != "0":
+                print("\n" + "-" * 40)
+                print("1. Volver al menu principal.")
+                print("2. Salir.")
+                siguiente = input("Elije una opcion: ").strip()
+                if siguiente == "2":
+                    print("¡Hasta la proxima!")
+                    break
+
     def _mostrar_menu(self) -> None:
-        print("=" * 40) # Linea continua formada por 40 guiones
-        print("         CineMatch (v1)")
+        print("=" * 40)
+        print("        CineMatch (v1)")
         print("=" * 40)
         print("1. Buscar película por título")
-        print("2. Catálogo")
+        print("2. Explorar categorias")
         print("3. Filtrar por género")
         print("4. Filtrar por universo")
         print("5. Obtener recomendaciones")
@@ -51,11 +83,31 @@ class Terminal:
         else:
             print(f"No encontramos: '{titulo}'.")
 
-    def _listar_todo(self) -> None:
-        peliculas = self._catalogo.listar()
-        print(f"--- Mostrando {len(peliculas)} peliculas ---")
-        for pelicula in peliculas:
-            print(f"- {pelicula}")
+    def _explorar_categorias(self) -> None:
+        print("\n--- Categorías ---")
+        #categorias = self._arbol_categorias.amplitud()[1:]
+        #for categoria in categorias:
+        #for c in self._arbol_categorias.amplitud():
+         #   print(f" - {categoria}")
+        nodo_raiz = self._arbol_categorias.raiz #buscar("Peliculas")
+
+        for genero in nodo_raiz.hijos:
+            print(f"[{genero.dato}]")
+            for sub in genero.hijos:
+                print(f"  └── {sub.dato}")
+
+        eleccion = input("Ingrese la categoria o subcategoria que quiere ver: ").strip()
+        resultados = self._catalogo.filtrar_por_subcategoria(eleccion)
+
+        if not resultados:
+            resultados = self._catalogo.filtrar_por_genero(eleccion)
+
+        if resultados:
+            print(f"Peliculas de {eleccion}")
+            for pelicula in resultados:
+                print(f"- {pelicula.titulo} (Dir: {pelicula._director})")
+        else:
+            print(f"No encontramos peliculas para '{eleccion}'.")
 
     def _filtrar_genero(self) -> None:
         genero = input("Genero: ").strip()
@@ -65,7 +117,7 @@ class Terminal:
             for pelicula in result:
                 print(f"- {pelicula}")
         else:
-                print(f"No hay películas del género '{genero}'.")
+            print(f"No hay películas del género '{genero}'.")
 
     def _filtrar_universo(self) -> None:
         universo = input("Universo: ").strip()
@@ -75,5 +127,10 @@ class Terminal:
             for pelicula in result:
                 print(f"- {pelicula}")
         else:
-                print(f"No hay películas del universo '{universo}'.")
+            print(f"No hay películas del universo '{universo}'.")
 
+    def _recomendar(self) -> None:
+        print("Función de recomendaciones próximamente.")
+
+    def _ver_mas_tarde(self) -> None:
+        print("Tu lista 'Ver más tarde' está vacía.")

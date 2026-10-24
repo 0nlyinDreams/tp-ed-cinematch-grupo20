@@ -1,9 +1,12 @@
+from estructura.arbol_general import ArbolGeneral
 from servicios.catalogo import Catalogo
 
 class Terminal: 
     """Interfaz de línea de comandos."""
     def __init__(self, catalogo: Catalogo) -> None:
         self._catalogo = catalogo
+        self._arbol_categorias = ArbolGeneral()
+        self._inicializar_arbol_categorias()
 
     def iniciar(self) -> None:
         # Un bucle que no muere en la primera opción
@@ -14,7 +17,8 @@ class Terminal:
             if opcion == "1":
                 self._buscar_titulo()
             elif opcion == "2":
-                self._listar_todo()
+                self._explorar_categorias()
+               # self._listar_todo()
             elif opcion == "3":
                 self._filtrar_genero()
             elif opcion == "4":
@@ -50,12 +54,29 @@ class Terminal:
             print(f"Encontrada: {result}")
         else:
             print(f"No encontramos: '{titulo}'.")
+    
+    def _explorar_categorias(self) -> None:
+         print("\n--- Categorías ---")
+         categorias = self._arbol_categorias.amplitud()[1:]
+         for categoria in categorias:
+         #for c in self._arbol_categorias.amplitud():
+             print(f" - {categoria}")
+ 
+         eleccion = input("Ingrese la categoria que quiere ver: ").strip()
+         resultados = self.catalogo.filtrar_por_genero(eleccion)
+ 
+         if resultados:
+             print(f"Peliculas de {eleccion}")
+             for pelicula in resultados:
+                 print(f"- {pelicula.titulo} (Dir: {pelicula._director})")
+         else:
+             print(f"No encontramos peliculas en la categoria '{eleccion}")
 
-    def _listar_todo(self) -> None:
-        peliculas = self._catalogo.listar()
-        print(f"--- Mostrando {len(peliculas)} peliculas ---")
-        for pelicula in peliculas:
-            print(f"- {pelicula}")
+    #def _listar_todo(self) -> None:
+     #   peliculas = self._catalogo.listar()
+      #  print(f"--- Mostrando {len(peliculas)} peliculas ---")
+       # for pelicula in peliculas:
+        #    print(f"- {pelicula}")
 
     def _filtrar_genero(self) -> None:
         genero = input("Genero: ").strip()

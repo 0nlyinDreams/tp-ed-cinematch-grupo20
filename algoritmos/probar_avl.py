@@ -5,11 +5,11 @@ from estructura.avl import AVL, comparar_bst_vs_avl
 from estructura.arbol_general import ArbolGeneral
 
 class Elemento:
-    def __init__(self, titulo, categoria):
+    def __init__(self, titulo, genero):
         self.titulo = titulo
-        self.categoria = categoria
+        self.genero = genero
     def __repr__(self):
-        return f"{self.titulo}({self.categoria})"
+        return f"{self.titulo}({self.genero})"
 
 def probar():
     datos = [
@@ -44,7 +44,7 @@ def probar():
 
         print("\n" + "="*45 + "\n")
 
-        print("categorias")
+        print("generos")
         arbol = ArbolGeneral()
         raiz = arbol.insertar_raiz("Peliculas")
 
@@ -57,12 +57,14 @@ def probar():
 
         print(f"raiz del arbol: {arbol.raiz.dato}")
         print(f"altura del arbol: {arbol.altura()}")
+        print(f" tiempo bst ms: {resultado['tiempo_bst_ms']:.4f}")
+        print(f" tiempo avl ms: {resultado['tiempo_avl_ms']:.4f}")
         print(f"cantidad total de nodos: {arbol.cantidad_nodos()}")
 
         print("BFS")
         print(arbol.amplitud())
 
-        print("busqueda de categoria 'Avatar'")
+        print("busqueda de genero 'Avatar'")
         print("resultado:", arbol.buscar("Avatar"))
 
 if __name__ == "__main__":

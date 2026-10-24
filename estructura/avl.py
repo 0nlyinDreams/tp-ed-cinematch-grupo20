@@ -122,30 +122,47 @@ class AVL:
         return 1 + self._contar(nodo.izquierda) + self._contar(nodo.derecha)
 
 def comparar_bst_vs_avl(lista_datos, clave):
-        import time
+    import time
+    try:
+        from estructura.arbol_binario import ArbolBST
+    except ImportError:
         try:
             from arbol_binario import ArbolBST
         except ImportError:
-            return {"error": "No se encontro arbol_binario.py"}
-        bst = ArbolBST()
-        for d in lista_datos:
-            bst.insertar(d, clave=clave)
-        avl = AVL()
-        for d in lista_datos:
-            avl.insertar(d, clave=clave)
-        valores = clave(lista_datos[0])
-        t0 = time.time()
-        for _ in range(1000):
-            bst.buscar(valores, clave=clave)
-        t_bst = (time.time() - t0) * 1000
-        t0 = time.time()
-        for _ in range(1000):
-            avl.buscar(valores, clave=clave)
-        t_avl = (time.time() - t0) * 1000
-        return {
-            "altura_bst": bst.altura(),
-            "altura_avl": avl.altura(),
-            "tiempo_bst_ms": t_bst,
-            "tiempo_avl_ms": t_avl,
-            "mejor_balance": avl.altura() < bst.altura()
-        }
+            return {"error": "No se encontró arbol_binario.py"}
+            
+    bst = ArbolBST()
+    for d in lista_datos:
+        bst.insertar(clave(d), valor=d)
+        
+    avl = AVL()
+    for d in lista_datos:
+        avl.insertar(d, clave=clave)
+        
+    valores = clave(lista_datos[0])
+    
+    t0 = time.time()
+    for _ in range(1000):
+        bst.buscar(valores)
+    t_bst = (time.time() - t0) * 1000
+    
+    t0 = time.time()
+    for _ in range(1000):
+        avl.buscar(valor=valores, clave=clave)
+    t_avl = (time.time() - t0) * 1000
+    
+    # Calculamos la altura del BST manualmente leyendo sus nodos
+    def calcular_altura_bst(nodo):
+        if nodo is None:
+            return 0
+        return 1 + max(calcular_altura_bst(nodo.izquierdo), calcular_altura_bst(nodo.derecho))
+        
+    altura_bst = calcular_altura_bst(bst.raiz)
+    
+    return {
+        "altura_bst": altura_bst,
+        "altura_avl": avl.altura(),
+        "tiempo_bst_ms": t_bst,
+        "tiempo_avl_ms": t_avl,
+        "mejor_balance": avl.altura() < altura_bst
+    }
