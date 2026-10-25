@@ -1,7 +1,7 @@
 class Nodo:
     def __init__(self, clave: str, valor=None):
-        self.clave = clave.strip().lower()  # Guardamos la clave en minúsculas para comparar fácil
-        self.valor = valor                  # Objeto Película
+        self.clave = clave.strip().lower()  # clave en minúsculas para comparar fácil
+        self.valor = valor                  # objeto Película
         self.izquierdo = None
         self.derecho = None
 

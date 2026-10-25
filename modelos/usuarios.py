@@ -1,4 +1,4 @@
-class usuario: 
+class Usuario: 
     """Representa a un usuario del sistema."""
     def __init__(self, id_usuario: int, nombre: str, genero_favorito: str):
         self._id_usuario = id_usuario

@@ -1,5 +1,6 @@
 from servicios.catalogo import Catalogo
 from estructura.arbol_general import ArbolGeneral
+from servicios.recomendador import GrafoRecomendador
 
 class Terminal: 
     def __init__(self, catalogo: Catalogo) -> None:
@@ -7,6 +8,9 @@ class Terminal:
         # Inicializamos el Árbol General para las categorías (Opción 2)
         self._arbol_categorias = ArbolGeneral()
         self._inicializar_arbol_categorias()
+        #grafo
+        self._recomendador = GrafoRecomendador()
+        self._recomendador.construir_grafo(self._catalogo.listar())
 
     def _inicializar_arbol_categorias(self) -> None:
         raiz = self._arbol_categorias.insertar_raiz("Películas")
@@ -148,7 +152,21 @@ class Terminal:
             print(f"No hay películas del universo '{universo}'.")
 
     def _recomendar(self) -> None:
-        print("Función de recomendaciones próximamente.")
+        #print("Función de recomendaciones próximamente.")
+        print("--- Sistema de Recomendaciones ---")
+        titulo_buscado = input("Ingrese una pelicula para obtener recomendaciones: ")
+        pelicula_encontrada= self._catalogo.buscar_por_titulo(titulo_buscado)
+        if pelicula_encontrada:
+            similares = self._recomendador.obtener_similares(pelicula_encontrada.titulo)
+            if similares:
+                print(f"Porque te gusto '{pelicula_encontrada.titulo}', te recomendamos:")
+                for sim in similares:
+                    print(f" └─ {sim}")
+            else: 
+                print(f"Por ahora no tenemos recomendaciones")
+        else:
+            print("No encontramos esa pelicula en el catalogo")
+        
 
     def _ver_mas_tarde(self) -> None:
         print("Tu lista 'Ver más tarde' está vacía.")
