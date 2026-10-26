@@ -1,6 +1,7 @@
 from servicios.catalogo import Catalogo
 from estructura.arbol_general import ArbolGeneral
 from servicios.recomendador import GrafoRecomendador
+from estructuras.heap import Ranking
 
 class Terminal: 
     def __init__(self, catalogo: Catalogo) -> None:
@@ -61,8 +62,10 @@ class Terminal:
             elif opcion == "4":
                 self._filtrar_universo()
             elif opcion == "5":
-                self._recomendar()
+                self._ver_top_5()
             elif opcion == "6":
+                self._recomendar()
+            elif opcion == "7":
                 self._ver_mas_tarde()
             elif opcion == "0":
                 print("¡Hasta la próxima!")
@@ -88,8 +91,9 @@ class Terminal:
         print("2. Explorar categorias")
         print("3. Filtrar por género")
         print("4. Filtrar por universo")
-        print("5. Obtener recomendaciones")
-        print("6. Mi lista 'Ver más tarde'")
+        print("5. Ver TOP 5")
+        print("6. Obtener recomendaciones")
+        print("7. Mi lista 'Ver más tarde'")
         print("0. Salir")
         print("-" * 40)
 
@@ -150,6 +154,16 @@ class Terminal:
                 print(f"- {pelicula}")
         else:
             print(f"No hay películas del universo '{universo}'.")
+            
+    def _ver_top_5(self) -> None:
+        print("--- Top 5 Peliculas ---")
+        top_5_pelis = self._catalogo.obtener_top_5()
+        if not self._ver_top_5:
+            print("No hay peliculas disponibles en el catalogo")
+            return
+        for i, peli in enumerate(top_5_pelis, start=0):
+            print(f"{i + 1}. {peli.titulo} - {peli.rating}")
+           
 
     def _recomendar(self) -> None:
         #print("Función de recomendaciones próximamente.")
@@ -166,7 +180,7 @@ class Terminal:
                 print(f"Por ahora no tenemos recomendaciones")
         else:
             print("No encontramos esa pelicula en el catalogo")
-        
 
+        
     def _ver_mas_tarde(self) -> None:
         print("Tu lista 'Ver más tarde' está vacía.")

@@ -51,7 +51,7 @@
 import json
 from modelos.pelicula import Pelicula
 from estructura.arbol_binario import ArbolBinarioBusqueda as ArbolBinario
-
+from estructuras.heap import Ranking
 class Catalogo:
     """Lógica de negocio: carga y operaciones sobre el catálogo."""
 
@@ -70,7 +70,8 @@ class Catalogo:
                     item["actores"],
                     item["genero"],
                     item["universo"],
-                    item.get("subcategoria", "General")
+                    item.get("subcategoria", "general"),
+                    rating =item.get("rating", 0.0)
                 )
                 self._elementos.append(pelicula)
                 # Insertamos cada pelicula cargada en el arbol usando el titulo como clave
@@ -95,12 +96,24 @@ class Catalogo:
             if p.universo.lower() == universo.lower()
         ]   
 
-    def buscar_por_director(self, director: str) -> list[Pelicula]:
-        """Devuelve todas las películas de un mismo director."""
-        return [
-            p for p in self._elementos
-            if p.director.lower() == director.lower()
-        ]   
+    def obtener_top_5(self) -> list:
+        ranking_heap = Ranking()
+        for peli in self.listar():
+            ranking_heap.insertar((peli.rating, peli.titulo, peli))
+        top_5 = []
+        for _ in range(5):
+            if ranking_heap.esta_vacio():
+                break
+            _, _, pelicula = ranking_heap.extraer_maximo()
+            top_5.append(pelicula)
+        return top_5
+
+   # def buscar_por_director(self, director: str) -> list[Pelicula]:
+    #    """Devuelve todas las películas de un mismo director."""
+     #   return [
+      #      p for p in self._elementos
+       #     if p.director.lower() == director.lower()
+        #]   
 
     def filtrar_por_subcategoria(self, subcategoria: str) -> list[Pelicula]:
         #return [

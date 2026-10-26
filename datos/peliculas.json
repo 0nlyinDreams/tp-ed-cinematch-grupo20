@@ -5,7 +5,8 @@
     "actores": ["Tobey Maguire", "Kirsten Dunst", "Alfred Molina"],
     "genero": "Acción",
     "universo": "Spider-Man",
-    "subcategoria": "Superheroes"
+    "subcategoria": "Superheroes",
+    "rating": 8.5
   },
   {
     "titulo": "Spider-Man: No Way Home",
@@ -13,7 +14,8 @@
     "actores": ["Tom Holland", "Zendaya", "Tobey Maguire"],
     "genero": "Acción",
     "universo": "Marvel",
-    "subcategoria": "Superheroes"
+    "subcategoria": "Superheroes",
+    "rating": 8.7
   },
   {
     "titulo": "Avengers: Endgame",
@@ -21,7 +23,8 @@
     "actores": ["Robert Downey Jr.", "Chris Evans", "Tom Holland"],
     "genero": "Acción",
     "universo": "Marvel",
-    "subcategoria": "Superheroes"
+    "subcategoria": "Superheroes",
+    "rating": 8.9
   },
   {
     "titulo": "Iron Man",
@@ -29,21 +32,24 @@
     "actores": ["Robert Downey Jr.", "Gwyneth Paltrow", "Jeff Bridges"],
     "genero": "Acción",
     "universo": "Marvel",
-    "subcategoria": "Superheroes"
+    "subcategoria": "Superheroes",
+    "rating": 8.6
   },
   {
     "titulo": "Chef",
     "director": "Jon Favreau",
     "actores": ["Jon Favreau", "Robert Downey Jr.", "Scarlett Johansson"],
     "genero": "Comedia",
-    "universo": "Independiente"
+    "universo": "Independiente",
+    "rating": 7.5
   },
   {
     "titulo": "Marriage Story",
     "director": "Noah Baumbach",
     "actores": ["Adam Driver", "Scarlett Johansson", "Laura Dern"],
     "genero": "Drama",
-    "universo": "Independiente"
+    "universo": "Independiente",
+    "rating": 8.0
   },
   {
     "titulo": "Jurassic Park",
@@ -51,7 +57,8 @@
     "actores": ["Sam Neill", "Laura Dern", "Jeff Goldblum"],
     "genero": "Ciencia Ficción",
     "universo": "Jurassic",
-    "subcategoria": "Dinosaurios y Mounstros"
+    "subcategoria": "Dinosaurios y Mounstros",
+    "rating": 9.0
   },
   {
     "titulo": "Thor: Ragnarok",
@@ -59,7 +66,8 @@
     "actores": ["Chris Hemsworth", "Tom Hiddleston", "Jeff Goldblum"],
     "genero": "Acción",
     "universo": "Marvel",
-    "subcategoria": "Superheroes"
+    "subcategoria": "Superheroes",
+    "rating": 8.2
   },
   {
     "titulo": "Kong: Skull Island",
@@ -67,14 +75,16 @@
     "actores": ["Tom Hiddleston", "Samuel L. Jackson", "Brie Larson"],
     "genero": "Aventura",
     "universo": "MonsterVerse",
-    "subcategoria": "Dinosaurios y Mounstros"
+    "subcategoria": "Dinosaurios y Mounstros",
+    "rating": 6.8
   },
   {
     "titulo": "Pulp Fiction",
     "director": "Quentin Tarantino",
     "actores": ["John Travolta", "Uma Thurman", "Samuel L. Jackson"],
     "genero": "Crimen",
-    "universo": "Tarantino"
+    "universo": "Tarantino",
+    "rating": 7.2
   },
   {
     "titulo": "Kill Bill: Vol. 1",
@@ -82,7 +92,8 @@
     "actores": ["Uma Thurman", "Lucy Liu", "David Carradine"],
     "genero": "Acción",
     "universo": "Tarantino",
-    "subcategoria": "Artes Marciales"
+    "subcategoria": "Artes Marciales",
+    "rating": 8.8
   },
   {
     "titulo": "Charlie's Angels",
@@ -90,7 +101,8 @@
     "actores": ["Cameron Diaz", "Drew Barrymore", "Lucy Liu"],
     "genero": "Acción",
     "universo": "Angels",
-    "subcategoria": "Espionaje y Agentes"
+    "subcategoria": "Espionaje y Agentes",
+    "rating": 6.5
   },
   {
     "titulo": "Shrek",
@@ -98,7 +110,8 @@
     "actores": ["Mike Myers", "Eddie Murphy", "Cameron Diaz"],
     "genero": "Animación",
     "universo": "Shrek",
-    "subcategoria": "Comedia animada"
+    "subcategoria": "Comedia animada",
+    "rating":9.4
   },
   {
     "titulo": "Mulan",
@@ -106,7 +119,8 @@
     "actores": ["Ming-Na Wen", "Eddie Murphy", "BD Wong"],
     "genero": "Animación",
     "universo": "Disney",
-    "subcategoria": "Princesas"
+    "subcategoria": "Princesas",
+    "rating": 8.4
   },
   {
     "titulo": "Jurassic World",
@@ -114,7 +128,8 @@
     "actores": ["Chris Pratt", "Bryce Dallas Howard", "BD Wong"],
     "genero": "Ciencia Ficción",
     "universo": "Jurassic",
-    "subcategoria": "Dinosaurios y Mounstros"
+    "subcategoria": "Dinosaurios y Mounstros",
+    "rating": 7.0
   },
   {
     "titulo": "Guardians of the Galaxy",
@@ -122,7 +137,8 @@
     "actores": ["Chris Pratt", "Zoe Saldana", "Dave Bautista"],
     "genero": "Ciencia Ficción",
     "universo": "Marvel",
-    "subcategoria": "Aventura Espacial"
+    "subcategoria": "Aventura Espacial",
+    "rating": 8.3
   },
   {
     "titulo": "Avatar",
@@ -130,14 +146,16 @@
     "actores": ["Sam Worthington", "Zoe Saldana", "Sigourney Weaver"],
     "genero": "Ciencia Ficción",
     "universo": "Avatar",
-    "subcategoria": "Aventura Espacial"
+    "subcategoria": "Aventura Espacial",
+    "rating": 7.9
   },
   {
     "titulo": "Alien",
     "director": "Ridley Scott",
     "actores": ["Sigourney Weaver", "Tom Skerritt", "John Hurt"],
     "genero": "Terror",
-    "universo": "Alien"
+    "universo": "Alien",
+    "rating": 8.5
   },
   {
     "titulo": "Prometheus",
@@ -145,14 +163,16 @@
     "actores": ["Noomi Rapace", "Michael Fassbender", "Charlize Theron"],
     "genero": "Ciencia Ficción",
     "universo": "Alien",
-    "subcategoria": "Aventura Espacial"
+    "subcategoria": "Aventura Espacial",
+    "rating": 7.1
   },
   {
     "titulo": "X-Men: First Class",
     "director": "Matthew Vaughn",
     "actores": ["James McAvoy", "Michael Fassbender", "Jennifer Lawrence"],
     "genero": "Acción",
-    "universo": "X-Men"
+    "universo": "X-Men",
+    "rating": 7.5
   },
   {
     "titulo": "Harry Potter y la Piedra Filosofal",
@@ -160,7 +180,8 @@
     "actores": ["Daniel Radcliffe", "Emma Watson", "Rupert Grint"],
     "genero": "Fantasia",
     "universo": "Wizarding World",
-    "subcategoria": "Magia y Hechiceria"
+    "subcategoria": "Magia y Hechiceria",
+    "rating": 9.1
   },
   {
     "titulo": "Las Crónicas de Narnia: El León, la Bruja y el Ropero",
@@ -168,7 +189,8 @@
     "actores": ["Georgie Henley", "Skandar Keynes", "William Moseley"],
     "genero": "Fantasia",
     "universo": "Narnia",
-    "subcategoria": "Mundos Magicos"
+    "subcategoria": "Mundos Magicos",
+    "rating": 7.7
   },
   {
     "titulo": "Miss Peregrine y los Niños Peculiares",
@@ -176,7 +198,8 @@
     "actores": ["Eva Green", "Asa Butterfield", "Samuel L. Jackson"],
     "genero": "Fantasia",
     "universo": "Miss Peregrine",
-    "subcategoria": "Fantasia Oscura"
+    "subcategoria": "Fantasia Oscura",
+    "rating": 7.0
   },
   {
     "titulo": "El Conjuro",
@@ -184,7 +207,8 @@
     "actores": ["Vera Farmiga", "Patrick Wilson", "Lili Taylor"],
     "genero": "Terror",
     "universo": "Warren",
-    "subcategoria": "Sobrenatural"
+    "subcategoria": "Sobrenatural",
+    "rating": 8.1
   },
   {
     "titulo": "El Viaje de Chihiro",
@@ -192,7 +216,8 @@
     "actores": ["Rumi Hiiragi", "Miyu Irino", "Mari Natsuki"],
     "genero": "Animación",
     "universo": "Studio Ghibli",
-    "subcategoria": "Anime"
+    "subcategoria": "Anime",
+    "rating": 6.3
   },
   {
     "titulo": "El Laberinto del Fauno",
@@ -200,7 +225,8 @@
     "actores": ["Ivana Baquero", "Sergi López", "Maribel Verdú"],
     "genero": "Fantasia",
     "universo": "Independiente",
-    "subcategoria": "Fantasia Oscura"
+    "subcategoria": "Fantasia Oscura",
+    "rating": 9.2
   },
   {
     "titulo": "Coraline y la Puerta Secreta",
@@ -208,7 +234,8 @@
     "actores": ["Dakota Fanning", "Teri Hatcher", "John Hodgman"],
     "genero": "Fantasia",
     "universo": "Independiente",
-    "subcategoria": "Fantasia Oscura"
+    "subcategoria": "Fantasia Oscura",
+    "rating": 7.8
   },
   {
     "titulo": "El Cadáver de la Novia",
@@ -216,7 +243,8 @@
     "actores": ["Johnny Depp", "Helena Bonham Carter", "Emily Watson"],
     "genero": "Fantasia",
     "universo": "Tim Burton",
-    "subcategoria": "Fantasia Oscura"
+    "subcategoria": "Fantasia Oscura",
+    "rating": 8.9
   },
   {
     "titulo": "Shingeki no Kyojin: The Final Chapters",
@@ -224,7 +252,8 @@
     "actores": ["Yuki Kaji", "Yui Ishikawa", "Marina Inoue"],
     "genero": "Animación",
     "universo": "Attack on Titan",
-    "subcategoria": "Anime"
+    "subcategoria": "Anime",
+    "rating": 9.6
   },
   {
     "titulo": "Your Name",
@@ -232,7 +261,8 @@
     "actores": ["Ryunosuke Kamiki", "Mone Kamishiraishi", "Ryo Narita"],
     "genero": "Animación",
     "universo": "Makoto Shinkai",
-    "subcategoria": "Anime"
+    "subcategoria": "Anime",
+    "rating": 7.4
   },
   {
     "titulo": "Animales Fantásticos y Dónde Encontrarlos",
@@ -240,7 +270,8 @@
     "actores": ["Eddie Redmayne", "Katherine Waterston", "Dan Fogler"],
     "genero": "Fantasía",
     "universo": "Wizarding World",
-    "subcategoria": "Magia y Hechiceria"
+    "subcategoria": "Magia y Hechiceria",
+    "rating": 7.5
   }
 ]
 
