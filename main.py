@@ -3,6 +3,7 @@ from ui.terminal import Terminal
 from estructura.avl import AVL
 from estructura.arbol_general import ArbolGeneral
 from estructuras.heap import Ranking
+from servicios.vermastarde import listaVerMasTarde
 
 def main() -> None:
     # 1 Creamos la logica del sistema

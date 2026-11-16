@@ -2,10 +2,12 @@ from servicios.catalogo import Catalogo
 from estructura.arbol_general import ArbolGeneral
 from servicios.recomendador import GrafoRecomendador
 from estructuras.heap import Ranking
+from servicios.vermastarde import listaVerMasTarde
 
 class Terminal: 
     def __init__(self, catalogo: Catalogo) -> None:
         self._catalogo = catalogo
+        self._lista_ver_mas_tarde = listaVerMasTarde()
         # Inicializamos el Árbol General para las categorías (Opción 2)
         self._arbol_categorias = ArbolGeneral()
         self._inicializar_arbol_categorias()
@@ -183,4 +185,19 @@ class Terminal:
 
         
     def _ver_mas_tarde(self) -> None:
-        print("Tu lista 'Ver más tarde' está vacía.")
+        print("--- Lista 'Ver mas tarde' ---")
+        print("1. Ver mi lista")
+        print("2. Agregar pelicula a la lista")
+        opcion = input("Elija una opcion: ").strip()
+
+        if opcion == "1":
+            self._lista_ver_mas_tarde.mostrar()
+        elif opcion == "2":
+            titulo = input("Ingrese el titulo de la pelicula para agregar: ").strip()
+            pelicula = self._catalogo.buscar_por_titulo(titulo)
+            if pelicula:
+                self._lista_ver_mas_tarde.agregar(pelicula)
+            else:
+                print(f"No encontramos la pelicula '{titulo}' en el catalogo.")
+        else:
+            print("Opcion invalida.")
